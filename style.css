@@ -37,6 +37,7 @@ section {
 }
 .about,
 .services,
+.gallery,
 .skills,
 .teams,
 .contact,
@@ -60,6 +61,7 @@ footer {
   align-items: center;
   justify-content: space-evenly;
 }
+
 section .title {
   position: relative;
   text-align: center;
@@ -331,6 +333,91 @@ section .title::after {
   font-weight: 500;
   margin: 10px 0 7px 0;
 }
+
+/* gallery */
+.gallery .title::before,
+.teams .title::before {
+  background: #fff;
+}
+.gallery .title::after,
+.teams .title::after {
+  background: #111;
+  content: "what i provide";
+}
+ /* .gallery .slide {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+} */
+  .gallery .slider-frame{
+      overflow: hidden;
+      height: 800px;
+      width: 1200px;
+      justify-content: center;
+      margin-left: 200px;
+       background: #222;
+  text-align: center;
+  border-radius: 6px;
+  padding: 12px 12px;
+  display: flex;
+
+  }
+ 
+  /*---------- SLIDE ANIMATION --------------*/
+ 
+ 
+  @keyframes slide_animation{
+      0% {left:0px;}
+      10% {left:0px;}
+      20% {left:1200px;}
+      30% {left:1200px;}
+      40% {left: 2400px;}
+      50% {left: 2400px;}
+      60% {left: 1200px;}
+      70% {left: 1200px;}
+      80% {left: 0px;}
+      90% {left: 0px;}
+      100% {left:0px;}
+  }
+ 
+  @-webkit-keyframes slide_animation{
+      0% {left:0px;}
+      10% {left:0px;}
+      20% {left:1200px;}
+      30% {left:1200px;}
+      40% {left: 2400px;}
+      50% {left: 2400px;}
+      60% {left: 1200px;}
+      70% {left: 1200px;}
+      80% {left: 0px;}
+      90% {left: 0px;}
+      100% {left:0px;}
+  }
+ 
+  .gallery .slide-images{
+      width: 3600px;
+      height: 800px;
+      margin: 0 0 0 -2400px;
+      position: relative;
+      -webkit-animation-name: slide_animation;
+      animation-name: slide_animation;
+      -webkit-animation-duration: 33s;
+      animation-duration: 33s;
+      -webkit-animation-iteration-count: infinite;
+      animation-iteration-count: infinite;
+      -webkit-animation-direction: alternate;
+      animation-direction: alternate;
+      -webkit-animation-play-state: running;
+      animation-play-state: running;
+  }
+ 
+  .gallery .img-container{
+      height: 800px;
+      width: 1200px;
+      position: relative;
+      float: left;
+  }
 
 /* skills section styling */
 
